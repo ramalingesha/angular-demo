@@ -1,0 +1,31 @@
+<div class="row justify-content-center align-items-center h-100 user-detailspage">
+  <div class="user-detailsbox">
+    <div class="row justify-content-center mb-3">
+      <h3>Welcome to Quiz App</h3>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-10">
+        <form #userDetailsForm="ngForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="name" class="form-input-label">Your Name</label>
+            <input type="text" class="form-control" id="name" required
+              [(ngModel)]="user.name" name="name" #name="ngModel">
+            <div [hidden]="name.valid || !name.touched" class="form-input-error">
+              Name is required
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-input-label">Email</label>
+            <input type="email" class="form-control" id="email" required [(ngModel)]="user.email"
+              name="email" #email="ngModel" email>
+            <div [hidden]="email.valid || !email.touched" class="form-input-error">
+              Email is required
+            </div>
+          </div>
+    
+          <button type="submit" class="btn btn-primary" [disabled]="!userDetailsForm.form.valid">Start</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

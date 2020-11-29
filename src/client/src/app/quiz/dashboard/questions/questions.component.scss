@@ -1,0 +1,17 @@
+.questionnaire-panel {
+  .question {
+    width: 100%;
+    padding: 1rem 1.5rem;
+  }
+  .header-panel {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    .header {
+      margin: 0;
+      font-weight: 300;
+    }
+  }
+  .question {
+    flex: 1;
+  }
+}

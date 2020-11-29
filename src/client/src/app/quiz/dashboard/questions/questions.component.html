@@ -1,0 +1,16 @@
+<div class="d-flex flex-column questionnaire-panel">
+  <div>
+    <div class="d-flex">
+      <div class="header-panel mr-auto border-bottom border-danger">
+        <h4 class="header">Question {{currentQuestion}}/{{totalQuestions}}</h4>
+      </div>
+      <div>
+
+      </div>
+    </div>
+  </div>
+  <div class="question">
+    <app-question [questionInputModel]="questionInputModel" (nextQuestionEvent)="showNextQuestion($event)">
+    </app-question>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.user-detailspage {
+  background-size: cover;
+  background-image: url("../../assets/images/login_bg.jpg");
+  background-position: 50% 50%;
+  .user-detailsbox {
+    padding: 1rem;
+    width: 425px;
+    .form-group {
+      min-height: 95px;
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<div class="question-details">
+  <h5 [innerHtml]="questionInputModel?.question"></h5>
+  <div class="options">
+    <app-question-input-option [inputOptionType]="questionInputModel?.inputOptionType"
+      [options]="questionInputModel?.options" (answerUpdateEvent)="onAnswerUpdate($event)"></app-question-input-option>
+  </div>
+  <div class="py-4">
+    <button type="button" class="btn btn-primary next-btn"
+      (click)="onNext()">{{questionInputModel?.buttonText}}</button>
+  </div>
+</div>

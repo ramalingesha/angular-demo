@@ -1,0 +1,22 @@
+<div>
+  <h4>SUMMARY</h4>
+  <div>
+    <span class="header">Correct:</span>
+    <span class="value">{{resultSummary.noOfCorrectAnswers}}</span>
+  </div>
+  <div>
+    <span class="header">Wrong:</span>
+    <span class="value">{{resultSummary.noOfIncorrectAnswers}}</span>
+  </div>
+  <div>
+    <span class="header">Questions Answered:</span>
+    <span class="value">{{resultSummary.noOfQuestionsAnswered}}</span>
+  </div>
+  <div>
+    <span class="header">Final Score:</span>
+    <span class="value">{{resultSummary.finalScore}}</span>
+  </div>
+  <div class="py-4">
+    <button type="button" class="btn btn-primary next-btn" (click)="onReset()">Reset Quiz</button>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<ng-container [ngSwitch]="inputOptionType">
+  <!-- Text Input option -->
+  <ng-container *ngSwitchCase="InputOptionType.TEXT_INPUT">
+    <input #input type="text" class="option" (blur)="change(input.value)">
+  </ng-container>
+
+  <!-- Multiple choices -->
+  <ng-container *ngSwitchCase="InputOptionType.MULTIPLE_CHOICE">
+    <ng-container [ngTemplateOutlet]="optionsTemplate"></ng-container>
+  </ng-container>
+
+  <!-- True/False selection -->
+  <ng-container *ngSwitchCase="InputOptionType.BOOLEN">
+    <ng-container [ngTemplateOutlet]="optionsTemplate"></ng-container>
+  </ng-container>
+</ng-container>
+
+<ng-template #optionsTemplate>
+  <div class="form-check option" *ngFor="let option of options">
+    <input class="form-check-input" type="radio" name="options" value="{{option.value}}"
+      (change)="change(option.value)">
+    <label class="form-check-label">
+      {{option.displayString}}
+    </label>
+  </div>
+</ng-template>
