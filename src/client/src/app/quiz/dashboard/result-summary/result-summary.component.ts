@@ -13,7 +13,7 @@ export class ResultSummaryComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.resultSummary = history.state.resultSummary;
+    this.resultSummary = history.state ? history.state.resultSummary : {};
   }
 
   onReset(): void {

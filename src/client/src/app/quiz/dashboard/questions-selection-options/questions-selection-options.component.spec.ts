@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { QuestionsSelectionOptionsComponent } from './questions-selection-options.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('QuestionsSelectionOptionsComponent', () => {
   let component: QuestionsSelectionOptionsComponent;
@@ -8,6 +9,7 @@ describe('QuestionsSelectionOptionsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
       declarations: [ QuestionsSelectionOptionsComponent ]
     })
     .compileComponents();

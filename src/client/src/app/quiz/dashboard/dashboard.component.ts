@@ -12,7 +12,7 @@ export class DashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.user = history.state.user;
+    this.user = history.state ? history.state.user : {};
   }
 
 }

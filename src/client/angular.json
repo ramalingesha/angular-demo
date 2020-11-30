@@ -104,6 +104,12 @@
             "styles": [
               "src/assets/scss/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./src/assets/scss",
+                "./node_modules/bootstrap/scss"
+              ]
+            },
             "scripts": []
           }
         },

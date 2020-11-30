@@ -22,7 +22,7 @@ export class QuestionsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    let quizOptionsModel: QuizOptionsModel = history.state.quizOptionsModel;
+    let quizOptionsModel: QuizOptionsModel = history.state ? history.state.quizOptionsModel : {};
 
     if (!quizOptionsModel) {
       quizOptionsModel = {
